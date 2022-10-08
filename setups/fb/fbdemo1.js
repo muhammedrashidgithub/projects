@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $("#signup1-form").validate({
+        rules:{
+            logml:{
+                required:true,
+                email:true
+            },
+            logps:{
+                required:true,
+                minlength:8
+            },
+        }
+    })
+})

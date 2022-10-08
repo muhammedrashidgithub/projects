@@ -1,0 +1,176 @@
+.header{
+    background:#3b5998;
+    width: 100%;
+    height: 85px;
+}
+body{
+    margin:0;
+    font-family: helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.logo{
+    width:50%;
+    padding-top: 25px;
+    float: left;
+}
+.login{
+    width: 50%;
+    float: left;
+}  
+.logo-text{
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 170px;
+    font-family: helvetica Neue, Arial, Helvetica, sans-serif;
+    padding-bottom: 30px;
+}
+.login-label{
+    color: #fff;
+    font-size: 11px;
+}
+.login-controls{
+    margin-left: 115px;
+}
+.login{
+    padding-top: 10px;
+}
+.forgotten{
+    color: #fff;
+    font-size: 11px;
+    text-decoration: none;
+    color: #9cb4d8;
+}
+.sub-btn{
+    background: #4267b2;
+    color: #fff;
+    height: 20px;
+    border-color: #29487d;    
+}
+.sub-btn:hover{
+    background: #01102e;
+}
+.main-body{
+    background: linear-gradient(white,#d3d8e8);
+    width: 100%;
+    height: 80%;
+    margin-left: none;
+    margin-right: none;
+}
+.left-section{
+    float: left;
+    margin-top: 20px;
+    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.font{
+    margin-left: 68px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Arial;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 100px;
+    margin-right: -334px;
+}
+.img{
+    padding-left: 245px;
+}
+.right-section{
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    padding-right: 245px;
+}
+.firstname{
+    width: 180px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 4px;
+    border-radius: 05px;
+    border: none;
+    border: 1px solid #95a5a6;
+    padding-left: 10px;
+    font-size:;
+}
+.surename{
+    width: 180px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 4px;
+    border-radius: 05px;
+    border: none;
+    border: 1px solid #95a5a6;
+    padding-left: 10px;
+    font-size: ;
+    float: right;
+    margin-top: -35px;
+}
+.email{
+    width: 380px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 4px;
+    border-radius: 05px;
+    border: none;
+    border: 1px solid #95a5a6;
+    padding-left: 10px;
+    font-size:;
+}
+.pass
+{
+    width: 380px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 4px;
+    border-radius: 05px;
+    border: none;
+    border: 1px solid #95a5a6;
+    padding-left: 10px;
+    font-size:;
+}
+.h1{
+    padding-left: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 3px;
+}
+.h3{
+    padding-left: 4px;
+}
+.age{
+    width: 80px;
+    height:30px;
+    margin-left: 3px;
+    
+}
+.table1{
+    padding-left: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.birth{
+    font-weight: bold;
+    padding-left: 3px;
+}
+.agetable{
+    margin-left: 5px;
+}
+.gender{
+    font-weight: bold;
+    padding-left: 3px;
+}
+.submit{
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 4px;
+    margin-left: 8px;
+    margin-top: 28px;
+    background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    box-shadow: inset 0 1px 1px #a4e388;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+    font-size: 29px;
+}
+.submit:hover{
+    background: #01102e;
+}

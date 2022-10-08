@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<script type="text/javascript">
+		function validate(){
+			var name = document.forms["RegForm"]["name"].value;
+			var doorno = document.forms["RegForm"]["dno"].value;
+			var hname = document.forms["RegForm"]["hname"].value;
+			var city = document.forms["RegForm"]["city"].value;
+			var dist = document.forms["RegForm"]["dist"].value;
+			var state = document.forms["RegForm"]["state"].value;
+			var pin = document.forms["RegForm"]["pin"].value;
+			var email = document.forms["RegForm"]["email"].value;
+			var phone = document.forms["RegForm"]["phone"].value;
+			var password1 = document.forms["RegForm"]["password1"].value;
+			var password2 = document.forms["RegForm"]["password2"].value;
+			var sub = document.forms["RegForm"]["sub"].value;
+		if(name == "" && email == "" && phone == "" && password1 == "" && city == "" && state == "" && dist == "" && doorno == "" && hname == "" && pin == "")
+		{
+			alert("Please enter all the details");
+			return false;
+		} else
+		{
+			if(name == "" || name == null)
+			{
+				window.alert("Please enter your name..!");
+				return false;
+			}
+			if(doorno == "" || doorno == null)
+			{
+				window.alert("Please enter the Door no..!");
+				return false;
+			}
+			if(hname == ""  || hname == null)
+			{
+				window.alert("Please enter House name..!");
+				return false;
+			}
+			if(city == "" || city == null)
+			{
+				window.alert("Please enter your city..!");
+				return false;
+			}
+			if(dist == "" || dist == null)
+			{
+				window.alert("Please enter your District..!");
+				return false;
+			}
+			if(state == "" || state == null)
+			{
+				window.alert("Please enter your state..!");
+				return false;
+			}
+			if(pin == "" || pin == null)
+			{
+				window.alert("Please enter your pincode..!");
+				return false;
+			}else if (pin.length < 6 || pin.length > 6)
+			{
+				alert("Please enter valid pincode..!");
+				return false;
+			}
+			if(email == "" || email == null)
+			{
+				window.alert("Please enter a valid email address..!");
+				return false;
+			}else{
+				var regex = /^\S+@\S+\.\S+$/;
+				if(regex.test(email) == false)
+				{
+					alert("Please enter a valid email address..!");
+					return false;
+				}
+			}
+
+			if(password1 == "" || password1 == null)
+			{
+				window.alert("Please enter your password");
+				return false;
+			}else{
+				if(password1.length < 8)
+				{
+					alert("password must contain at least eight character..!");
+					return false;
+				}
+				if(password1.match(/[a-z]/g) && password1.match(/[A-Z]/g) && password1.match(/[0-9]/g) && password1.match(/[^a-zA-Z\d]/g))
+				{
+					flag=1;
+				}else
+				{
+					alert("password must contain atleast one number one alphabat and a special character..!");
+					return false;
+				}
+				if(password1 != password2)
+				{
+					alert("Please re-enter the correct password ");
+					return false;
+				}
+			}
+			if(phone == "" || phone == null)
+			{
+				window.alert("Please enter valid mobile number..!");
+				return false;
+			}else (phone.length <= 10)
+			{
+				alert("Please enter a valid mobile number");
+			}
+			if(sub == "" || sub == null)
+			{
+				alert("Please enetr your course");
+				return false;
+			}
+
+		}
+		}
+		function myFunction(){
+			var x = document.getElementById("p1");
+			if(x.type === "password")
+			{
+				x.type = "text";
+			}else{
+				x.type = "password";
+			}
+		}
+	</script>
+
+	<style>
+		body{
+			background-image: url(coffee.jpg);
+			background-size: cover;
+		}
+		.h1{
+			font-family: helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: bold;
+			font-color: #ffffff
+			margin-left: 100px;
+		}
+
+		
+		}
+		.addressf{
+			text-align: center;
+			width:10%;
+			border: transparent;
+			margin: 0 0 15px;
+			padding: 5px;
+			box-sizing: border-box;
+			font-size: 14px;
+			}
+		
+		form{
+			width: 800px;
+			font-weight: bold;
+			line-height: 30px;
+			margin-left: 100px;
+			font-family: URW Chancery L, cursive;
+			font-style: oblique;
+			font-size: 20px;
+			align-items: center;
+		}
+		input{
+			clear: both;
+			padding: 12px 10px;
+			margin: 8px 10px;
+			box-sizing: border-box;
+			text-align: center;
+		}
+		input[type = button], input[type = submit]
+		{
+			background-color: #4CAF50;
+			border:none;
+			color: white;
+			padding: 16px 32px;
+			text-decoration: none;
+			margin: 4px 2px;
+			cursor: pointer;
+          
+        }
+       
+	</style>
+		
+</head>
+<body>
+
+	<div class = "container">
+		<h1 class="h1">REGISTRATION FORM</h1>
+		<form name="RegForm" action = "submit.html" onsubmit="return validate()" method="=get">
+			<ul type="none">
+				<li><input type="text" name="name" placeholder="NAME " style="width: 50%"></li><br>
+				<li>Address
+					<div class="addressf" >
+						
+						<input type="text" name="dno" placeholder="DOOR NO" style ="width:50%"><br>
+						
+						<input type="text" name="hname" placeholder="STREET NAME" style="width:50%"><br>
+						
+						<input type="text" name="city" placeholder="CITY" style="width: 50%"><br>
+						
+						<input type="text" name="dist" placeholder="DISTRICT" style="width: 50%"><br>
+						
+						<input type="text" name="state" placeholder="STATE" style="width: 50%"><br>
+						
+						<input type="text" name="pin" placeholder="PINCODE" style="width: 50%"><br>
+					</div></li>
+					<li> <input type="text"  name="email" placeholder="EMAIL" style="width: 50%"></li><br>
+					<li><input type="text" name="phone" placeholder="MOBILE NO." minlength ="0" maxlength ="10" style="width: 50%"></li><br>
+					<li><input type="password" name="password1" placeholder="PASSWORD" style="width: 50%" id="p1"></li>
+					<input type="checkbox" onclick="myFunction()">Show Password<br>
+					<li><input type="password" name="password2" placeholder="CONFRIM PASSWORD" style="width: 50%"></li><br>
+					<p>SELECT YOUR COURSE
+						<select type="text" name="sub">
+							<option value="cse">CSE</option>
+							<option value="ece">ECE</option>
+							<option value="eee">EEE</option>
+							<option value="mech">MECH</option>
+							<option value="civil">CIVIL</option>
+						</p></select><br><br>
+					<li><textarea cols="55" placeholder="COMMENTS" name="Comment"></textarea></li><br>
+					<input type="submit" value="Submit" >
+					<input type="button" value="clickme" onclick="validate()">
+			</ul>
+		</form>
+	</div>
+
+</body>
+</html>

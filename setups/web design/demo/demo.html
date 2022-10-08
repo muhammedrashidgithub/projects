@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+		function validate(){
+            var name = document.forms["RegForm"]["name"].value;
+            var phone = document.forms["RegForm"]["phone"].value;
+                if(name.length < 4){
+                alert("please enter atleast four characters")
+            }
+                else{
+                    if(phone.length < 10 || phone.length > 10)
+			{
+				    alert("Please enter a valid mobile number")
+            }
+                }
+        }
+    </script>
+
+<style>
+    body{
+        background-size: cover;
+    }form{
+			width: 800px;
+			font-weight: bold;
+			line-height: 15px;
+			margin-left: 505px;
+			font-family: URW Chancery L, cursive;
+			font-style: oblique;
+			font-size: 20px;
+            align-items: center;
+		}
+		input{
+			clear: both;
+			padding: 10px 8px;
+			margin: 6px 8px;
+			box-sizing: border-box;
+            text-align: center;
+            border-radius: 5px;
+		}
+		input[type = button], input[type = submit]
+		{
+			background-color: #4CAF50;
+			border:none;
+			color: white;
+			padding: 14px 28px;
+			text-decoration: none;
+			margin: 4px 2px;
+            cursor: pointer;
+            width: 190px;
+            
+        }.h1{
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 10px;
+			margin-top: -8px;
+            font-family: helvetica Neue, Arial, Helvetica, sans-serif;
+			padding: 6px;
+        }
+        </style>
+</head>
+<body>
+    <div class = "container">
+        <div class="header">
+        <h1  class="h1" style="text-align: center " >REGISTRATION FORM</h1>
+        </div>
+		<form name="RegForm" action = "demo1.html" onsubmit="return validate()" method="=get">
+            <input type="text" name="name" placeholder="NAME " style="width: 50%"><br>
+            <input type="text" name="phone" placeholder="MOBILE NO." minlength ="0" maxlength ="10" style="width: 50%"><br>
+            <input type="submit" value="Submit" onclick="validate()">
+			<input type="button" value="clickme" onclick="validate()">
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<script type="text/javascript">
+		function validate(){
+			var name = document.forms["RegForm"]["name"].value;
+			
+			var email = document.forms["RegForm"]["email"].value;
+			var phone = document.forms["RegForm"]["phone"].value;
+			var password1 = document.forms["RegForm"]["password1"].value;
+			var password2 = document.forms["RegForm"]["password2"].value;
+			var sub = document.forms["RegForm"]["sub"].value;
+		if(name == "" && email == "" && phone == "" && password1 == "" && pin == "")
+		{
+			alert("Please enter all the details");
+			return false;
+		} else
+		{
+			if(name == "" || name == null)
+			{
+				window.alert("Please enter your name..!");
+				return false;
+			}
+			
+			if(email == "" || email == null)
+			{
+				window.alert("Please enter a valid email address..!");
+				return false;
+			}else{
+				var regex = /^\S+@\S+\.\S+$/;
+				if(regex.test(email) == false)
+				{
+					alert("Please enter a valid email address..!");
+					return false;
+				}
+			}
+
+			if(password1 == "" || password1 == null)
+			{
+				window.alert("Please enter your password");
+				return false;
+			}else{
+				if(password1.length < 8)
+				{
+					alert("password must contain at least eight character..!");
+					return false;
+				}
+				if(password1.match(/[a-z]/g) && password1.match(/[A-Z]/g) && password1.match(/[0-9]/g) && password1.match(/[^a-zA-Z\d]/g))
+				{
+					flag=1;
+				}else
+				{
+					alert("password must contain atleast one number one alphabat and a special character..!");
+					return false;
+				}
+				if(password1 != password2)
+				{
+					alert("Please re-enter the correct password ");
+					return false;
+				}
+			}
+			if(phone == "" || phone == null)
+			{
+				window.alert("Please enter valid mobile number..!");
+				return false;
+			}else if(phone.length < 10 || phone.length > 10)
+			{
+				alert("Please enter a valid mobile number");
+			}
+			if(sub == "" || sub == null)
+			{
+				alert("Please choose your course");
+				return false;
+			}
+
+		}
+		}
+		function myFunction(){
+			var x = document.getElementById("p1");
+			if(x.type === "password")
+			{
+				x.type = "text";
+			}else{
+				x.type = "password";
+			}
+		}
+	</script>
+
+	<style>
+		body{
+			background-image: url(gabriel.jpg);
+			background-size: cover;
+		}
+
+		form{
+			width: 800px;
+			font-weight: bold;
+			line-height: 15px;
+			margin-left: 450px;
+			font-family: URW Chancery L, cursive;
+			font-style: oblique;
+			font-size: 20px;
+            align-items: center;
+		}
+		input{
+			clear: both;
+			padding: 10px 8px;
+			margin: 6px 8px;
+			box-sizing: border-box;
+            text-align: center;
+            border-radius: 5px;
+		}
+		input[type = button], input[type = submit]
+		{
+			background-color: #4CAF50;
+			border:none;
+			color: white;
+			padding: 14px 28px;
+			text-decoration: none;
+			margin: 4px 2px;
+            cursor: pointer;
+            width: 190px;
+            
+        }
+        .h1{
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 10px;
+			margin-top: -8px;
+            font-family: helvetica Neue, Arial, Helvetica, sans-serif;
+			padding: 6px;
+        }
+        .header{ background:#3b5998;
+            width: 100%;
+			height: 50px;
+
+        }.label{
+			color:lightslategrey;
+			padding-left: 13px;
+		}
+       
+	</style>
+		
+</head>
+<body>
+
+	<div class = "container">
+        <div class="header">
+        <h1  class="h1" style="text-align: center " >REGISTRATION FORM</h1>
+        </div>
+		<form name="RegForm" action = "submit.html" onsubmit="return validate()" method="=get">
+			<ul type="none">
+				<label class="label">surename :</label><br>
+				<label>       <br></label>
+					<li><input type="text" name="name" placeholder="NAME " style="width: 50%"></li><br>
+					<label class="label">address :</label>
+					<label>       <br></label>
+				
+					<li><input type="text"  name="email" placeholder="EMAIL" style="width: 50%"></li><br>
+					<li><input type="text" name="phone" placeholder="MOBILE NO." minlength ="0" maxlength ="10" style="width: 50%"></li><br>
+					<li><input type="password" name="password1" placeholder="PASSWORD" style="width: 50%" id="p1"></li>
+					<input type="checkbox" onclick="myFunction()"><label class="label">Show Password</label><br>
+					<li><input type="password" name="password2" placeholder="CONFRIM PASSWORD" style="width: 50%"></li><br>
+					<label class="label">SELECT YOUR COURSE :</label>
+						<select type="text" name="sub">
+							<option value="cse">CSE</option>
+							<option value="ece">ECE</option>
+							<option value="eee">EEE</option>
+							<option value="mech">MECH</option>
+							<option value="civil">CIVIL</option>
+						</p></select><br><br>
+					<li><textarea cols="48" placeholder="COMMENTS" name="Comment"></textarea></li><br>
+					<input type="submit" value="Submit" >
+					<input type="button" value="clickme" onclick="validate()">
+			</ul>
+		</form>
+	</div>
+
+</body>
+</html>
